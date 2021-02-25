@@ -65,6 +65,9 @@ while True:
   if (k == 113):  # q is pressed
     break
 
+# remove any abnormal box
+bboxes = list(filter(lambda x: x != (0,0,0,0), bboxes))
+
 print('Selected bounding boxes {}'.format(bboxes))
 
 # Specify the tracker type
